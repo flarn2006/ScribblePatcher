@@ -36,7 +36,7 @@ int CALLBACK WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR lpCmdLine, int 
 	
 	if (file == INVALID_HANDLE_VALUE) {
 		// Display an error message. Reuses the filename buffer as it's no longer needed.
-		//FormatMessage(FORMAT_MESSAGE_FROM_SYSTEM, 0, GetLastError(), 0, filename, 1024, NULL);
+		FormatMessage(FORMAT_MESSAGE_FROM_SYSTEM, 0, GetLastError(), 0, filename, 1024, NULL);
 		MessageBox(NULL, filename, "Error", MB_ICONERROR);
 		return EXIT_FILE_ERROR;
 	}
