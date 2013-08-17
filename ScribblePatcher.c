@@ -4,6 +4,7 @@
 #define BYTE_EXPECTED 0x41
 #define BYTE_NEW 0x21
 
+#define EXIT_USER_CANCEL 4
 #define EXIT_FILE_ERROR 3
 #define EXIT_INCORRECT_VERSION 2
 #define EXIT_ALREADY_PATCHED 1
@@ -27,7 +28,10 @@ int CALLBACK WinMain(HINSTANCE hInst, HINSTANCE hPrevInst, LPSTR lpCmdLine, int 
 	ofn.lpstrTitle =		"Select your Scribblenauts Unlimited executable (Scribble.exe)";
 	ofn.Flags =				OFN_FILEMUSTEXIST | OFN_HIDEREADONLY;
 	
-	GetOpenFileName(&ofn);
+	if (!GetOpenFileName(&ofn)) {
+		// user hit Cancel; just quit without a message
+		return EXIT_USER_CANCEL;
+	}
 	
 	// Open the file and check patchability
 	
