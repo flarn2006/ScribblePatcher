@@ -1,1 +1,29 @@
-1 ICON "ScribblePatcher.ico"
+0 ICON "ScribblePatcher.ico"
+1 VERSIONINFO
+	FILEVERSION    1,1,0,1
+	PRODUCTVERSION 1,1,0,1
+	FILEFLAGSMASK  0x3FL
+	FILEFLAGS      0x0L
+	FILEOS         0x40004L
+	FILETYPE       0x1L
+	FILESUBTYPE    0x0L
+	BEGIN
+		BLOCK "StringFileInfo"
+		BEGIN
+			BLOCK "040904b0"
+			BEGIN
+				VALUE "CompanyName",      "flarn2006"
+				VALUE "FileDescription",  "ScribblePatcher"
+				VALUE "FileVersion",      "1.1"
+				VALUE "InternalName",     "ScribblePatcher"
+				VALUE "LegalCopyright",   "MIT License"
+				VALUE "OriginalFilename", "ScribblePatcher.exe"
+				VALUE "ProductName",      "ScribblePatcher"
+				VALUE "ProductVersion",   "1.1"
+			END
+		END
+		BLOCK "VarFileInfo"
+		BEGIN
+			VALUE "Translation", 0x409, 1200
+		END
+	END
